@@ -1,6 +1,7 @@
 # ✨ AI Chat Assistant
 
-![Скриншот чата](screenshot.png) <!-- Добавь скриншот позже -->
+![Скриншот чата](screenshot.png)
+
 
 Современный AI-чат на базе **YandexGPT** с красивым интерфейсом, поддержкой **Markdown** и сохранением истории. Работает полностью в России, без VPN и иностранных карт.
 
@@ -21,52 +22,62 @@
 
 ## 🛠️ Технологии
 
-| Технология | Назначение |
-|------------|------------|
-| [Next.js 15](https://nextjs.org/) | Фреймворк |
-| [TypeScript](https://www.typescriptlang.org/) | Типизация |
-| [Tailwind CSS](https://tailwindcss.com/) | Стили |
-| [React Markdown](https://github.com/remarkjs/react-markdown) | Markdown |
-| [YandexGPT API](https://cloud.yandex.ru/services/yandexgpt) | AI |
-| [Vercel](https://vercel.com/) | Деплой |
+
+| Технология                                                   | Назначение |
+| ------------------------------------------------------------ | ---------- |
+| [Next.js 15](https://nextjs.org/)                            | Фреймворк  |
+| [TypeScript](https://www.typescriptlang.org/)                | Типизация  |
+| [Tailwind CSS](https://tailwindcss.com/)                     | Стили      |
+| [React Markdown](https://github.com/remarkjs/react-markdown) | Markdown   |
+| [YandexGPT API](https://cloud.yandex.ru/services/yandexgpt)  | AI         |
+| [Vercel](https://vercel.com/)                                | Деплой     |
+
 
 ---
 
 ## 📦 Установка и запуск
 
 ### 1. Клонируй репозиторий
+
 ```bash
 git clone https://github.com/etherea1ly/yandexgpt_chat.git
 cd yandexgpt_chat
 ```
 
 ### 2. Установи зависимости
+
 ```bash
 npm install
 ```
 
 ### 3. Получи API-ключ YandexGPT
+
 1. Зарегистрируйся в [Yandex Cloud](https://cloud.yandex.ru/)
 2. Создай сервисный аккаунт с ролью `ai.languageModels.user`
 3. Создай API-ключ (выбери scope `yc.ai.languageModels.execute`)
 4. Скопируй Folder ID из каталога
 
 ### 4. Настрой переменные окружения
+
 Создай файл .env.local
+
 ```env
 YANDEX_API_KEY=AQVN...твой_ключ
 YANDEX_FOLDER_ID=b1g...твой_folder_id
 ```
 
 ### 5. Запусти проект
+
 ```bash
 npm run dev
 ```
-Открой http://localhost:3000
+
+Открой [http://localhost:3000](http://localhost:3000)
 
 ---
 
 ## 🌐 Деплой на Vercel
+
 1. Залей код на GitHub
 2. Зайди на vercel.com
 3. Импортируй репозиторий
@@ -76,6 +87,7 @@ npm run dev
 ---
 
 ## 📁 Структура проекта
+
 ```text
 ├── app/
 │   ├── api/chat/yandex/
@@ -89,9 +101,11 @@ npm run dev
 ├── tsconfig.json
 └── README.md
 ```
+
 ---
 
 ## 🤝 Как внести вклад
+
 1. Форкни проект
 2. Создай ветку (git checkout -b feature/AmazingFeature)
 3. Закоммить изменения (git commit -m 'Add some AmazingFeature')
@@ -101,11 +115,13 @@ npm run dev
 ---
 
 ## 📝 Лицензия
+
 MIT — свободно для использования и модификации.
 
 ---
 
 🙏 Благодарности
+
 - [Yandex Cloud](https://cloud.yandex.ru/) за грант 4000 ₽
 - [Vercel](https://vercel.com/) за бесплатный хостинг
 - Сообществу Next.js и Tailwind CSS
@@ -113,3 +129,4 @@ MIT — свободно для использования и модификац
 ---
 
 ### Разработано с ❤️ для вайбкодинга
+
