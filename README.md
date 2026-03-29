@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✨ AI Chat Assistant
 
-## Getting Started
+![Скриншот чата](screenshot.png) <!-- Добавь скриншот позже -->
 
-First, run the development server:
+Современный AI-чат на базе **YandexGPT** с красивым интерфейсом, поддержкой **Markdown** и сохранением истории. Работает полностью в России, без VPN и иностранных карт.
 
+**Демо:** [yandexgpt-chat.vercel.app](https://yandexgpt-chat.vercel.app)
+
+---
+
+## 🚀 Возможности
+
+- ✅ **YandexGPT API** — официальный российский AI, грант 4000 ₽
+- ✅ **Markdown** — списки, заголовки, код, ссылки
+- ✅ **Сохранение истории** — диалог не исчезает после перезагрузки
+- ✅ **Современный UI** — градиенты, анимации, аватарки
+- ✅ **Адаптивный дизайн** — работает на телефонах и планшетах
+- ✅ **Автоскролл** — новые сообщения всегда в поле видимости
+
+---
+
+## 🛠️ Технологии
+
+| Технология | Назначение |
+|------------|------------|
+| [Next.js 15](https://nextjs.org/) | Фреймворк |
+| [TypeScript](https://www.typescriptlang.org/) | Типизация |
+| [Tailwind CSS](https://tailwindcss.com/) | Стили |
+| [React Markdown](https://github.com/remarkjs/react-markdown) | Markdown |
+| [YandexGPT API](https://cloud.yandex.ru/services/yandexgpt) | AI |
+| [Vercel](https://vercel.com/) | Деплой |
+
+---
+
+## 📦 Установка и запуск
+
+### 1. Клонируй репозиторий
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/etherea1ly/yandexgpt_chat.git
+cd yandexgpt_chat
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Установи зависимости
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Получи API-ключ YandexGPT
+1. Зарегистрируйся в [Yandex Cloud](https://cloud.yandex.ru/)
+2. Создай сервисный аккаунт с ролью `ai.languageModels.user`
+3. Создай API-ключ (выбери scope `yc.ai.languageModels.execute`)
+4. Скопируй Folder ID из каталога
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Настрой переменные окружения
+Создай файл .env.local
+```env
+YANDEX_API_KEY=AQVN...твой_ключ
+YANDEX_FOLDER_ID=b1g...твой_folder_id
+```
 
-## Learn More
+### 5. Запусти проект
+```bash
+npm run dev
+```
+Открой http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Деплой на Vercel
+1. Залей код на GitHub
+2. Зайди на vercel.com
+3. Импортируй репозиторий
+4. Добавь переменные окружения (YANDEX_API_KEY, YANDEX_FOLDER_ID)
+5. Нажми Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📁 Структура проекта
+```text
+├── app/
+│   ├── api/chat/yandex/
+│   │   └── route.ts      # API-маршрут для YandexGPT
+│   ├── globals.css       # Глобальные стили + Markdown
+│   ├── layout.tsx        # Корневой layout
+│   └── page.tsx          # Главный компонент чата
+├── public/               # Статика
+├── .env.local            # Переменные окружения (не в Git)
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Как внести вклад
+1. Форкни проект
+2. Создай ветку (git checkout -b feature/AmazingFeature)
+3. Закоммить изменения (git commit -m 'Add some AmazingFeature')
+4. Запушь (git push origin feature/AmazingFeature)
+5. Открой Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📝 Лицензия
+MIT — свободно для использования и модификации.
+
+---
+
+🙏 Благодарности
+- [Yandex Cloud](https://cloud.yandex.ru/) за грант 4000 ₽
+- [Vercel](https://vercel.com/) за бесплатный хостинг
+- Сообществу Next.js и Tailwind CSS
+
+---
+
+### Разработано с ❤️ для вайбкодинга
